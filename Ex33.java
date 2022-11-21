@@ -1,15 +1,6 @@
-import java.util.Scanner;
-
-public class Ex3 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String linea = sc.nextLine().trim();
-        System.out.println(esPalindromo(linea));
-        sc.close();
-
-    }
-
-    public static boolean esPalindromo(String lin) {
+public class Ex33 {
+    
+    public boolean esPalindromo(String lin) {
         lin = sinTilde(lin);
         lin = sinChar(lin);
         String nil = "";
@@ -18,13 +9,16 @@ public class Ex3 {
         }
 
         if (nil.equals(lin)) {
+            System.out.println(true);
             return true;
+            
         } else {
+            System.out.println(false);
             return false;
         }
     }
 
-    public static String sinTilde(String s) {
+    public String sinTilde(String s) {
         s = s.replaceAll("" + 'á', "" + 'a');
         s = s.replaceAll("" + 'é', "" + 'e');
         s = s.replaceAll("" + 'í', "" + 'i');
@@ -35,7 +29,7 @@ public class Ex3 {
 
     }
 
-    public static String sinChar(String s) {
+    public String sinChar(String s) {
         String lin = "";
         for (int i = 0; i <= s.length() - 1; i++) {
             if (Character.isAlphabetic(s.charAt(i))) {
