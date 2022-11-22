@@ -1,15 +1,6 @@
-import java.util.Scanner;
 
-public class Ex3 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String linea = sc.nextLine().trim();
-        System.out.println(esPalindromo(linea));
-        sc.close();
-
-    }
-
-    public static boolean esPalindromo(String lin) {
+   
+    public static void esPalindromo(String lin) {
         lin = sinTilde(lin);
         lin = sinChar(lin);
         String nil = "";
@@ -18,9 +9,10 @@ public class Ex3 {
         }
 
         if (nil.equals(lin)) {
-            return true;
+            System.out.println(true);
+            
         } else {
-            return false;
+            System.out.println(false);
         }
     }
 
@@ -45,4 +37,4 @@ public class Ex3 {
         }
         return lin.toLowerCase();
     }
-}
+
